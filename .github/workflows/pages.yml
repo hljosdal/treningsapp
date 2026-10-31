@@ -1,3 +1,4 @@
+# Publiserer den statiske appen. Ingen byggesteg.
 name: Publiser til GitHub Pages
 
 on:
