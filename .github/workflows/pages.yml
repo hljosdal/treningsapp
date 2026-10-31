@@ -26,6 +26,8 @@ jobs:
 
       - name: Sett opp Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Samle nettstedet
         run: |
