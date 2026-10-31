@@ -82,6 +82,8 @@ Nettstedet publiseres til GitHub Pages fra `main` med [`.github/workflows/pages.
 
 Adressen er [https://hljosdal.github.io/treningsapp/](https://hljosdal.github.io/treningsapp/).
 
+Første gang må Pages slås på av noen med admin på repoet: **Settings → Pages → Build and deployment → Source: GitHub Actions**. Kjør deretter workflowen «Publiser til GitHub Pages» på nytt. Selve publiseringen kan ikke slå på Pages med tokenet som Actions har.
+
 ## Status
 
 **v1.** Ukeplanen følger med i appen. Loggen lagres på telefonen og eksporteres som én JSON-fil per økt.
