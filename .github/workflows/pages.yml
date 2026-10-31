@@ -1,0 +1,43 @@
+name: Publiser til GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Hent kode
+        uses: actions/checkout@v4
+
+      - name: Sett opp Pages
+        uses: actions/configure-pages@v5
+
+      - name: Samle nettstedet
+        run: |
+          mkdir -p _site
+          cp index.html sw.js manifest.webmanifest .nojekyll _site/
+          cp -r css js data icons _site/
+
+      - name: Last opp nettsted
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Publiser
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Ukeplan og treningslogg for styrke. Følg økta og logg kg og reps.">
+  <meta name="theme-color" content="#ebe6dc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#100e0c" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Trening">
+  <title>Trening</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./css/app.css">
+  <script>
+    (function () {
+      try {
+        var valg = localStorage.getItem("harry-trening-tema");
+        var mork = valg === "mork" || (valg !== "lys" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.setAttribute("data-tema", mork ? "mork" : "lys");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="app">
+    <p class="laster">Henter ukeplanen…</p>
+  </div>
+  <div id="hvile" class="hvilebar" hidden>
+    <div class="hvile-tekst">
+      <p id="hvile-etikett">Hvile</p>
+      <p id="hvile-tid" class="hvile-tid">0:00</p>
+    </div>
+    <div class="hvile-knapper">
+      <button type="button" id="hvile-pluss">+30 s</button>
+      <button type="button" id="hvile-stopp">Stopp</button>
+    </div>
+  </div>
+  <p id="toast" class="toast" role="status" hidden></p>
+  <noscript><p class="feil">Appen trenger JavaScript for å vise ukeplanen.</p></noscript>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
