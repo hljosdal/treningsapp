@@ -36,7 +36,7 @@ test("ukeplanen har forventet form", () => {
   assert.equal(plan.dager.length, 7);
   assert.equal(typeof plan.progresjon, "string");
   assert.ok(Array.isArray(plan.notater));
-  assert.deepEqual(indeks.filer, ["ukeplan-uke45-2026.json"]);
+  assert.deepEqual(indeks.filer, ["ukeplan-uke45-2026.json", "ukeplan-uke46-2026.json"]);
 
   const typer = plan.dager.map((d) => d.type);
   assert.deepEqual(typer, ["kondisjon", "styrke", "kondisjon", "styrke", "hvile", "styrke", "kondisjon"]);
@@ -73,6 +73,7 @@ test("økt-id og filnavn", () => {
 });
 
 test("dagens økt velges etter dato", () => {
+  const plan46 = JSON.parse(fs.readFileSync(new URL("../data/ukeplan-uke46-2026.json", import.meta.url)));
   assert.equal(velgDato(plan, "2026-11-05"), "2026-11-05");
   assert.equal(velgDato(plan, "2026-10-31"), "2026-11-02");
   assert.equal(velgDato(plan, "2026-11-09"), "2026-11-08");
@@ -80,6 +81,16 @@ test("dagens økt velges etter dato", () => {
   assert.equal(velgPlan([plan], "2026-10-31"), plan);
   assert.equal(periodeTekst(plan), "2.–8. november");
   assert.equal(datoLang("2026-11-03"), "tirsdag 3. november");
+
+  const iDag = "2026-11-10";
+  const valgt = velgPlan([plan, plan46], iDag);
+  assert.equal(valgt, plan46);
+  assert.equal(velgDato(valgt, iDag), "2026-11-10");
+  assert.equal(valgt.dager.find((dag) => dag.dato === "2026-11-10").navn, "Styrke A");
+  assert.equal(valgt.dager.find((dag) => dag.dato === "2026-11-12").navn, "Styrke B");
+  assert.equal(valgt.dager.find((dag) => dag.dato === "2026-11-14").navn, "Styrke C");
+  assert.equal(velgPlan([plan, plan46], "2026-11-05"), plan);
+  assert.equal(periodeTekst(plan46), "9.–15. november");
 });
 
 test("reps, hvile og RIR er forståelig tekst", () => {
