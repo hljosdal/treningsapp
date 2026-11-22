@@ -36,7 +36,11 @@ test("ukeplanen har forventet form", () => {
   assert.equal(plan.dager.length, 7);
   assert.equal(typeof plan.progresjon, "string");
   assert.ok(Array.isArray(plan.notater));
-  assert.deepEqual(indeks.filer, ["ukeplan-uke45-2026.json", "ukeplan-uke46-2026.json"]);
+  assert.deepEqual(indeks.filer, [
+    "ukeplan-uke45-2026.json",
+    "ukeplan-uke46-2026.json",
+    "ukeplan-uke47-2026.json",
+  ]);
 
   const typer = plan.dager.map((d) => d.type);
   assert.deepEqual(typer, ["kondisjon", "styrke", "kondisjon", "styrke", "hvile", "styrke", "kondisjon"]);
@@ -91,6 +95,34 @@ test("dagens økt velges etter dato", () => {
   assert.equal(valgt.dager.find((dag) => dag.dato === "2026-11-14").navn, "Styrke C");
   assert.equal(velgPlan([plan, plan46], "2026-11-05"), plan);
   assert.equal(periodeTekst(plan46), "9.–15. november");
+
+  const plan47 = JSON.parse(fs.readFileSync(new URL("../data/ukeplan-uke47-2026.json", import.meta.url)));
+  assert.equal(plan47.uke, 47);
+  assert.equal(plan47.aar, 2026);
+  assert.equal(plan47.ukeIProgram, 3);
+  assert.equal(plan47.dager.length, 7);
+  assert.deepEqual(plan47.dager.map((d) => d.type), [
+    "kondisjon", "styrke", "kondisjon", "styrke", "kondisjon", "styrke", "hvile",
+  ]);
+  const styrkeA = plan47.dager.find((d) => d.dato === "2026-11-17");
+  const styrkeB = plan47.dager.find((d) => d.dato === "2026-11-19");
+  const styrkeC = plan47.dager.find((d) => d.dato === "2026-11-21");
+  assert.equal(styrkeA.ovelser.find((o) => o.id === "skra-manualpress-30").kg, 30);
+  assert.equal(styrkeB.ovelser.find((o) => o.id === "markloft").kg, 72.5);
+  assert.equal(styrkeC.ovelser.find((o) => o.id === "hammercurl").kg, 16);
+  assert.equal(styrkeC.ovelser.find((o) => o.id === "hammercurl").supersettMed, "overhead-triceps");
+  assert.equal(styrkeC.ovelser.find((o) => o.id === "overhead-triceps").supersettMed, "hammercurl");
+
+  const alle = [plan, plan46, plan47];
+  assert.equal(velgPlan(alle, "2026-11-05"), plan);
+  assert.equal(velgPlan(alle, "2026-11-10"), plan46);
+  assert.equal(velgPlan(alle, "2026-11-17"), plan47);
+  assert.equal(velgDato(plan47, "2026-11-22"), "2026-11-22");
+  assert.equal(plan47.dager.find((d) => d.dato === "2026-11-22").type, "hvile");
+  assert.equal(styrkeA.navn, "Styrke A");
+  assert.equal(styrkeB.navn, "Styrke B");
+  assert.equal(styrkeC.navn, "Styrke C");
+  assert.equal(periodeTekst(plan47), "16.–22. november");
 });
 
 test("reps, hvile og RIR er forståelig tekst", () => {

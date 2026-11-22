@@ -1,5 +1,5 @@
 // Øk CACHE når filene i appen endres, så telefonen henter den nye versjonen.
-const CACHE = "trening-v2";
+const CACHE = "trening-v3";
 
 const FILER = [
   "./index.html",
@@ -11,6 +11,7 @@ const FILER = [
   "./data/uker.json",
   "./data/ukeplan-uke45-2026.json",
   "./data/ukeplan-uke46-2026.json",
+  "./data/ukeplan-uke47-2026.json",
   "./icons/favicon-32.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

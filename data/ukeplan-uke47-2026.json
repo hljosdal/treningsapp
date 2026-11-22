@@ -1,0 +1,359 @@
+{
+  "versjon": 1,
+  "uke": 47,
+  "aar": 2026,
+  "program": "Muskelvekst",
+  "ukeIProgram": 3,
+  "antallUker": 12,
+  "dager": [
+    {
+      "dato": "2026-11-16",
+      "type": "kondisjon",
+      "navn": "Padel",
+      "pulssone": null,
+      "varighetMin": null,
+      "beskrivelse": "Fast padel på mandag. Teller som kondisjonsøkt."
+    },
+    {
+      "dato": "2026-11-17",
+      "type": "styrke",
+      "navn": "Styrke A",
+      "fokus": "Overkropp",
+      "oppvarming": [
+        "5 min sykkel eller rask gange",
+        "Armsirkler + hofteåpnere",
+        "2 oppvarmingssett på første øvelse: ~50 % og ~75 % av arbeidsvekt"
+      ],
+      "ovelser": [
+        {
+          "id": "benkpress",
+          "navn": "Benkpress (stang)",
+          "sett": 3,
+          "repsMin": 6,
+          "repsMaks": 10,
+          "enhet": "reps",
+          "rir": "2",
+          "hvileSek": 150,
+          "kg": null,
+          "tips": "Skuldrene ned og bak",
+          "supersettMed": null
+        },
+        {
+          "id": "kabelroing-sittende",
+          "navn": "Sittende kabelroing",
+          "sett": 3,
+          "repsMin": 8,
+          "repsMaks": 12,
+          "enhet": "reps",
+          "rir": "2",
+          "hvileSek": 120,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "skra-manualpress-30",
+          "navn": "Skrå manualpress 30°",
+          "sett": 3,
+          "repsMin": 8,
+          "repsMaks": 12,
+          "enhet": "reps",
+          "rir": "1-2",
+          "hvileSek": 120,
+          "kg": 30,
+          "tips": "30 kg per hantel. Sist 10/10/8 – mål 10/10/10, da 32 kg neste uke.",
+          "supersettMed": null
+        },
+        {
+          "id": "nedtrekk-bred",
+          "navn": "Nedtrekk bred",
+          "sett": 3,
+          "repsMin": 8,
+          "repsMaks": 12,
+          "enhet": "reps",
+          "rir": "1-2",
+          "hvileSek": 120,
+          "kg": null,
+          "tips": "Logg kg. Bygger styrke mot pullups.",
+          "supersettMed": null
+        },
+        {
+          "id": "sidehev",
+          "navn": "Sidehev",
+          "sett": 3,
+          "repsMin": 12,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 75,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "triceps-pushdown-tau",
+          "navn": "Triceps pushdown (tau)",
+          "sett": 2,
+          "repsMin": 10,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 60,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "bicepscurl-manual",
+          "navn": "Bicepscurl manual",
+          "sett": 2,
+          "repsMin": 10,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 60,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        }
+      ]
+    },
+    {
+      "dato": "2026-11-18",
+      "type": "kondisjon",
+      "navn": "Intervaller",
+      "pulssone": "Sone 4",
+      "varighetMin": 50,
+      "beskrivelse": "10 min rolig oppvarming, 6 × 3 min sone 4 (jevnt ca. 4:50–5:00/km på flatt, styr på puls i bakker) / 2 min rolig jogg, minst 10 min nedjogg. Lav HRV eller dårlig søvn: bytt til 40 min rolig sone 2."
+    },
+    {
+      "dato": "2026-11-19",
+      "type": "styrke",
+      "navn": "Styrke B",
+      "fokus": "Underkropp + core",
+      "oppvarming": [
+        "5 min sykkel eller rask gange",
+        "Armsirkler + hofteåpnere",
+        "2 oppvarmingssett på første øvelse: ~50 % og ~75 % av arbeidsvekt"
+      ],
+      "ovelser": [
+        {
+          "id": "kneboy",
+          "navn": "Knebøy",
+          "sett": 3,
+          "repsMin": 6,
+          "repsMaks": 10,
+          "enhet": "reps",
+          "rir": "2",
+          "hvileSek": 180,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "markloft",
+          "navn": "Markløft (stang)",
+          "sett": 3,
+          "repsMin": 6,
+          "repsMaks": 10,
+          "enhet": "reps",
+          "rir": "2-3",
+          "hvileSek": 180,
+          "kg": 72.5,
+          "tips": "72,5 kg (sist 70 kg 2 × 10, føltes lett). Nøytral rygg, stopp settet når teknikken glipper. +2,5 kg når 3 × 10 sitter.",
+          "supersettMed": null
+        },
+        {
+          "id": "bulgarsk-utfall",
+          "navn": "Bulgarsk utfall",
+          "sett": 2,
+          "repsMin": 8,
+          "repsMaks": 12,
+          "enhet": "per side",
+          "rir": "2",
+          "hvileSek": 105,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "beincurl",
+          "navn": "Beincurl",
+          "sett": 3,
+          "repsMin": 10,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 90,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "tahev",
+          "navn": "Tåhev",
+          "sett": 3,
+          "repsMin": 10,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 60,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "planke",
+          "navn": "Planke",
+          "sett": 3,
+          "repsMin": 30,
+          "repsMaks": 45,
+          "enhet": "sek",
+          "rir": null,
+          "hvileSek": 60,
+          "kg": null,
+          "tips": "Alternativ: kabel-crunch 3 × 10–15",
+          "supersettMed": null
+        }
+      ]
+    },
+    {
+      "dato": "2026-11-20",
+      "type": "kondisjon",
+      "navn": "Rolig langtur",
+      "pulssone": "Sone 2",
+      "varighetMin": 55,
+      "beskrivelse": "Rolig langtur i pratetempo, puls under ca. 135, flat løype. Flyttet fra søndag til fredag fordi helgeturen har falt ut to uker på rad. Bygger grunnlaget for 10 km-målet."
+    },
+    {
+      "dato": "2026-11-21",
+      "type": "styrke",
+      "navn": "Styrke C",
+      "fokus": "Fullkropp",
+      "oppvarming": [
+        "5 min sykkel eller rask gange",
+        "Armsirkler + hofteåpnere",
+        "2 oppvarmingssett på første øvelse: ~50 % og ~75 % av arbeidsvekt"
+      ],
+      "ovelser": [
+        {
+          "id": "pullups",
+          "navn": "Pullups / assistert",
+          "sett": 4,
+          "repsMin": 2,
+          "repsMaks": 5,
+          "enhet": "reps",
+          "rir": "1-2",
+          "hvileSek": 150,
+          "kg": null,
+          "tips": "Sist 4 × 2. Avslutt hvert sett med 1–2 negative (3–5 sek ned). Strikk ved behov.",
+          "supersettMed": null
+        },
+        {
+          "id": "skulderpress-manual-sittende",
+          "navn": "Sittende manual skulderpress",
+          "sett": 3,
+          "repsMin": 8,
+          "repsMaks": 12,
+          "enhet": "reps",
+          "rir": "2",
+          "hvileSek": 120,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "beinpress",
+          "navn": "Beinpress",
+          "sett": 3,
+          "repsMin": 10,
+          "repsMaks": 12,
+          "enhet": "reps",
+          "rir": "2",
+          "hvileSek": 120,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "ettarms-manualroing",
+          "navn": "Ettarms manualroing",
+          "sett": 3,
+          "repsMin": 8,
+          "repsMaks": 12,
+          "enhet": "per side",
+          "rir": "1-2",
+          "hvileSek": 90,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "brystflyes",
+          "navn": "Brystflyes (kabel/maskin)",
+          "sett": 2,
+          "repsMin": 12,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 75,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "facepulls",
+          "navn": "Facepulls",
+          "sett": 2,
+          "repsMin": 12,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 75,
+          "kg": null,
+          "tips": null,
+          "supersettMed": null
+        },
+        {
+          "id": "hammercurl",
+          "navn": "Hammercurl",
+          "sett": 2,
+          "repsMin": 10,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 75,
+          "kg": 16,
+          "tips": "16 kg per hantel. Sist 2 × 10 – øk reps mot 15, deretter 18 kg.",
+          "supersettMed": "overhead-triceps"
+        },
+        {
+          "id": "overhead-triceps",
+          "navn": "Overhead triceps",
+          "sett": 2,
+          "repsMin": 10,
+          "repsMaks": 15,
+          "enhet": "reps",
+          "rir": "1",
+          "hvileSek": 75,
+          "kg": null,
+          "tips": null,
+          "supersettMed": "hammercurl"
+        }
+      ]
+    },
+    {
+      "dato": "2026-11-22",
+      "type": "hvile"
+    }
+  ],
+  "progresjon": "Dobbel progresjon: når du når toppen av repsintervallet på alle sett ved mål-RIR, øk med ~2,5 kg (overkropp/markløft) eller ~5 kg (øvrig underkropp). Kg er satt der loggen har tall (skrå manualpress 30 kg, markløft 72,5 kg, hammercurl 16 kg); resten styres etter RIR til de er logget.",
+  "notater": [
+    "Logg kg og reps for hvert sett i appen og eksporter JSON til OneDrive/Grok Bot/20-PT/Logg – mappen var tom denne uka.",
+    "Markløft erstatter rumensk markløft i Styrke B denne uka (du har startet med markløft – unngå dobbelt hoftehengsel-volum).",
+    "Rolig langtur er flyttet til fredag og søndag er hviledag, så helgen bare har én økt (Styrke C).",
+    "Daglig justering: lav HRV eller dårlig søvn gir roligere dag eller lavere volum.",
+    "Smerte (ikke vanlig stølhet): hopp over øvelsen og kontakt fysioterapeut.",
+    "Forskning: Schoenfeld et al. 2017 (volum), Helgerud et al. 2007 (intervaller), Seiler 2010 (rolig/hard-fordeling)."
+  ]
+}
